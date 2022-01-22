@@ -3,9 +3,6 @@ const todoInput = document.querySelector('#todoInput');
 const output = document.querySelector('#output');
 const wrapper = document.querySelector('#wrapper');
 
-// LÄGG TILL ADDEVENTLISTENER  SUBMIT DEL SÅ ERROR FUNKAR
-
-
 
 let todos = [];
 
