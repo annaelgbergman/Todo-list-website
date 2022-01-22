@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --clr--primary: #8d8c8c;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.btn {
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.btn-primary {
+    background-color: #91aec4;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 0 9px 9px 0;
+    transition: background 110ms;
+    padding: .8em 1.4em;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+    background-color: #194569;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+body {
+    background:#91aec4;
+
+
+}
+.container {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+.form {
+    width: 100%;
+}
+
+.header {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #333;
+    background-image: url("/img/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ \(1\).jpg");
+    background-size: cover;
+}
+.input-group {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: .5rem;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+.add-todo {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 9px 0 0 9px;
+    border: none;
+    background-color: #fffdfd;
+}
+.add-todo[type=text]{
+    padding: 5px;
+    font-size: 15px;
+}
+.add-todo:focus{
+    outline: .03rem solid #797979;
+}
+.line {
+    width: 100%;
+    height: 2px;
+    background-color:#90a7bb;
+}
+/* ERROR */
+
+.invalid-input{
+    font-family: 'Roboto', sans-serif;    
+    margin-top: .5rem;
+    color: #c7421e;
+    font-size: 15px;
+    text-transform: none;
+    text-shadow: none;
+    visibility: hidden;
+
+}
+.error .invalid-input {
+    visibility: visible;
+    text-align: start;
+}
+.error .add-todo{
+    border: 1px solid #c7421e;
+}
+
+/* CARD START */
+.output {
+    display: flex;
+    justify-content: center;
+}
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 1000px;
+    height: 3.5rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 10px #547792;
+    border-radius: 9px;
+    margin-top: .5rem;
+}
+/* checked-class */
+.checked .delete {
+    visibility: visible;
+}
+.checked .todo-title {
+    text-decoration: line-through;
+    color: #cc4d2a;
+}
+
+.todo-title {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* DELETE BUTTON */
+.delete {
+    width: 25px;
+    height: 25px;
+    background-color: #cc4d2a;
+    color: #fff;
+    font-size: 15px;
+    visibility: hidden;
+    border-radius: 4px;
+}
+.delete:hover{
+    background-color: #a53212;
+}
+
+/* CHECKBOX */
+.square {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 22px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.square input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border-radius: 4px;
+    background-color: #eee;
+}
+.square:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.square input:checked ~ .checkmark {
+    background-color: #acbaa1;
+}
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.square input:checked ~ .checkmark:after {
+    display: block;
+}
+.square .checkmark::after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    /* border-radius: px; */
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* CHECKBOX END */
+
+
+@media (min-width: 768px) {
+    .todo {
+        width: 522px;
+    }
+    .wrapper{
+        width: 60%;
+    }
+}
+@media (min-width: 992px){
+    .wrapper{
+        width: 60%;
+    }
+}
+@media (min-width: 1024px){
+    .wrapper{
+        width: 40%;
+    }
+}
