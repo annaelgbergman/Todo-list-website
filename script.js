@@ -64,7 +64,6 @@ const createTodo = todo => {
       checkbox.checked = true;
     }
 
-    
     button.addEventListener('click', () => deleteTodo(todo.id, card))
     checkbox.addEventListener('click', () => {
         if(checkbox.checked === true){
@@ -83,7 +82,6 @@ function deleteTodo(id, todo){
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
         method: 'DELETE',
     })
-
     listTodos();
 }
 
